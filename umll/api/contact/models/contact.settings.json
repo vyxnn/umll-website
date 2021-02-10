@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "name": "Contact"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "societyFacebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "discord": {
+      "type": "string"
+    }
+  }
+}

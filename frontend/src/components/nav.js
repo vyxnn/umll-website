@@ -1,58 +1,34 @@
 import React from "react";
-import { Link, StaticQuery, graphql } from "gatsby";
+import {Link} from "gatsby";
+import logo from "../images/WhiteHeartLogo.png";
+import "../assets/css/nav.css";
 
-const Nav = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        strapiGlobal {
-          siteName
-        }
-        allStrapiCategory {
-          edges {
-            node {
-              slug
-              name
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <div>
-        <div>
-          <nav className="uk-navbar-container" data-uk-navbar>
-            <div className="uk-navbar-left">
-              <ul className="uk-navbar-nav">
-                <li>
-                  <Link to="/">{data.strapiGlobal.siteName}</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="uk-navbar-right">
-              <button
-                className="uk-button uk-button-default uk-margin-right"
-                type="button"
-              >
-                Categories
-              </button>
-              <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
-                <ul className="uk-nav uk-dropdown-nav">
-                  {data.allStrapiCategory.edges.map((category, i) => (
-                    <li key={`category__${category.node.slug}`}>
-                      <Link to={`/category/${category.node.slug}`}>
-                        {category.node.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </nav>
+const Nav = () => {
+  return (
+    <div className="nav">
+        <div className="logo-nav">
+          <Link to="/">
+            <img src={logo} className="image-nav" />
+          </Link>
         </div>
-      </div>
-    )}
-  />
-);
-
+        <div className="pages-nav">
+          <Link to="/about" className="link">
+            ABOUT
+          </Link>
+          <Link to="/signup" className="link">
+            SIGN UP
+          </Link>
+          <Link to="/events" className="link">
+            EVENTS
+          </Link>
+          <Link to="/merch" className="link">
+            MERCH
+          </Link>
+          <Link to="/sponsors" className="link">
+            SPONSORS
+          </Link>
+        </div>
+    </div>
+  );
+};
 export default Nav;

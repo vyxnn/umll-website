@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_social_medias",
+  "info": {
+    "name": "socialMedia",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "socialMediaType": {
+      "type": "enumeration",
+      "enum": [
+        "facebook",
+        "instagram",
+        "website",
+        "twitter"
+      ]
+    }
+  }
+}

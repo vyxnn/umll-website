@@ -1,0 +1,43 @@
+@font-face{
+    font-family: 'Avenir Heavy';
+    src: url("../font/Avenir-Heavy.ttf") format("truetype");
+} 
+
+@font-face{
+    font-family: 'Avenir Light';
+    src: url("../font/Avenir-Light.ttf") format("truetype");
+} 
+
+.merch-div{ 
+    margin-top: 2%; 
+}
+
+.merch-div .merch-title{ 
+    width: auto; 
+    clear: both; 
+    font-family: Avenir Heavy; 
+    text-transform: uppercase;
+    font-size: 25px; 
+    padding-left: 4%; 
+    padding-right: 4%; 
+}
+
+.merch-div .merch-body .merch-carousel .merch-image{ 
+    width: 70%; 
+    padding-left: 4%; 
+    object-fit: contain; 
+}
+
+.merch-div .merch-body .merch-carousel{ 
+    width: 45%; 
+    padding-left: 4%; 
+    padding-right: 4%; 
+    float: left; 
+}
+
+.merch-div .merch-body .merch-description{ 
+    float: right; 
+    width: 40%; 
+    margin-right: 5%; 
+    font-family: Avenir Light; 
+}

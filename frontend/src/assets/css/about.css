@@ -1,0 +1,48 @@
+@font-face{
+    font-family: 'Avenir Heavy';
+    src: url("../font/Avenir-Heavy.ttf") format("truetype");
+} 
+
+@font-face{
+    font-family: 'Avenir Light';
+    src: url("../font/Avenir-Light.ttf") format("truetype");
+} 
+
+.about-div{
+    padding-top: 4%; 
+    padding-left: 4%; 
+    padding-right: 4%; 
+}
+
+.about-div .about-left{
+    float: left; 
+    width: 42%; 
+    margin-right: 4%; 
+}
+
+.about-div .about-left .about-image{
+    width: 100%; 
+}
+
+.about-div .about-right{
+    float: right; 
+    width: 50%; 
+    margin-bottom: 50px; 
+}
+
+.about-div .about-right .about-title{
+    font-family: Avenir Heavy; 
+    text-transform: uppercase; 
+    font-size: 30px; 
+}
+
+.about-div .about-right .about-description{
+    font-family: Avenir Light; 
+    font-size: 15px; 
+}
+
+.about-div .about-right .signup-subheading{
+    font-family: Avenir Light; 
+    text-transform: uppercase; 
+    font-size: 30px;
+}

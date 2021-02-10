@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "merches",
+  "info": {
+    "name": "Merch",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "memberPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "nonMemberPrice": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

@@ -1,6 +1,6 @@
 require("dotenv").config({
-  path: `.env`,
-});
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   plugins: [
@@ -10,14 +10,15 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        icon: `src/images/icon.png`
       },
     },
     {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
-        contentTypes: ["article", "category", "writer"],
-        singleTypes: [`homepage`, `global`],
+        contentTypes: [`event`,`merch`, `sponsor`],
+        singleTypes: [`homepage`, `global`, `about`, `contact`, `sign-up`],
         queryLimit: 1000,
       },
     },
@@ -32,6 +33,7 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
+        icon:`src/images/icon.png`
       },
     },
     "gatsby-plugin-offline",

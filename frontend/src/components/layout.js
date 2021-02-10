@@ -1,10 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import Nav from "./nav";
-import Seo from "./seo";
+import Footer from "./footer";
 
-const Layout = ({ children, seo }) => (
+import "../assets/css/reset.css";
+
+const Layout = ({ children, pageName }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -12,25 +13,24 @@ const Layout = ({ children, seo }) => (
           seo {
             metaTitle
             metaDescription
-            shareImage {
+            shareImage{
               publicURL
             }
           }
         }
       }
     `}
-    render={(data) => (
+    render={() => (
       <>
-        <Seo seo={seo} />
-        <Nav />
+        <Nav/>
+        <div>
+          <div className = "title-nav"> {pageName} </div>
+        </div>
         <main>{children}</main>
+        <Footer/>
       </>
     )}
   />
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Layout;
