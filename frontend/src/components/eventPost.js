@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/event.css";
-
+//test
 const eventPost = ({ event }) => {
  // Formats from ISO time to a readable date format 
   const options = { year: "numeric", month: "long", day: "numeric" };
