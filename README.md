@@ -69,3 +69,6 @@ cp .env.example .env
 The Gatsby server will run here => [http://localhost:3000](http://localhost:3000)
 
 Enjoy this starter!
+
+## Deployment 
+https://github.com/61FINTECH/deploy-strapi-on-aws 

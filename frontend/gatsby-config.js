@@ -10,7 +10,7 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-        icon: `src/images/icon.png`
+        icon: `src/images/BlueHeartLogo.png`
       },
     },
     {
@@ -33,7 +33,7 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon:`src/images/icon.png`
+        icon:`src/images/BlueHeartLogo.png`
       },
     },
     "gatsby-plugin-offline",
