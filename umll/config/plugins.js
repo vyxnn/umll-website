@@ -2,8 +2,8 @@ module.exports = ({ env }) => ({
     upload: {
       provider: 'aws-s3',
       providerOptions: {
-        accessKeyId: env('AKIA24WGTJ3HRAQQUG5E'),
-        secretAccessKey: env('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'),
+        accessKeyId: env('stupid amazon 2.0'),
+        secretAccessKey: env('stupid amazon'),
         region: env("ap-southeast-2c"),
         params: {
           Bucket: env('umllbucket'),
