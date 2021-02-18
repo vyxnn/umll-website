@@ -1,15 +1,4 @@
 module.exports = ({ env }) => ({
-    upload: {
-      provider: 'aws-s3',
-      providerOptions: {
-        accessKeyId: env('stupid amazon 2.0'),
-        secretAccessKey: env('stupid amazon'),
-        region: env("ap-southeast-2c"),
-        params: {
-          Bucket: env('umllbucket'),
-        },
-      },
-    },
     email: {
       provider: 'sendgrid',
       providerOptions: {
