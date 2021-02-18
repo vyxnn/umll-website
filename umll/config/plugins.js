@@ -1,4 +1,15 @@
 module.exports = ({ env }) => ({
+    upload: {
+      provider: 'aws-s3',
+      providerOptions: {
+        accessKeyId: env('API_ACCESS_KEY'),
+        secretAccessKey: env('SECRET_ACCESS_KEY'),
+        region: "ap-southeast-2c",
+        params: {
+          Bucket: 'umllbucket',
+        },
+      },
+    },
     email: {
       provider: 'sendgrid',
       providerOptions: {
